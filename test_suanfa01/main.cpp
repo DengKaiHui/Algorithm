@@ -10,6 +10,7 @@
 #include "SortTestHelper.hpp"
 #include "InsertSort.hpp"
 #include "MergeSort.hpp"
+#include "MaxHeap.hpp"
 using namespace std;
 using namespace SortTestHelper;
 
