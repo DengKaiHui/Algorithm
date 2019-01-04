@@ -11,6 +11,7 @@
 #include "InsertSort.hpp"
 #include "MergeSort.hpp"
 #include "MaxHeap.hpp"
+#include "BST.hpp"
 using namespace std;
 using namespace SortTestHelper;
 
