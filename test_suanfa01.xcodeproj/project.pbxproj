@@ -26,9 +26,10 @@
 		3B43D69921A5B35500881811 /* test_suanfa01 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = test_suanfa01; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B43D69C21A5B35500881811 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		3B43D6A421A5B45700881811 /* SortTestHelper.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = SortTestHelper.hpp; sourceTree = "<group>"; };
-		6A08FA7021D90C33004145D0 /* MaxHeap.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = MaxHeap.hpp; sourceTree = "<group>"; };
 		6AB404A121B3CD4A00C687A1 /* MergeSort.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = MergeSort.hpp; sourceTree = "<group>"; };
 		6AB404A421B3CD7300C687A1 /* InsertSort.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = InsertSort.hpp; sourceTree = "<group>"; };
+		FE087D4C21DFA22600BCC669 /* BST.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = BST.hpp; sourceTree = "<group>"; };
+		FEAD8C8821D67BC500612739 /* MaxHeap.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = MaxHeap.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,10 +63,11 @@
 			isa = PBXGroup;
 			children = (
 				3B43D69C21A5B35500881811 /* main.cpp */,
-				6A08FA7021D90C33004145D0 /* MaxHeap.hpp */,
 				6AB404A421B3CD7300C687A1 /* InsertSort.hpp */,
 				6AB404A121B3CD4A00C687A1 /* MergeSort.hpp */,
+				FEAD8C8821D67BC500612739 /* MaxHeap.hpp */,
 				3B43D6A421A5B45700881811 /* SortTestHelper.hpp */,
+				FE087D4C21DFA22600BCC669 /* BST.hpp */,
 			);
 			path = test_suanfa01;
 			sourceTree = "<group>";
@@ -241,6 +243,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -249,6 +252,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

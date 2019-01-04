@@ -19,17 +19,17 @@ void insertSort(T *arr, int n) {
     for (int i=  1; i < n; i++) {
         // 选择元素arr[i]合适的插入位置
         
-        //        for (int j = i; j >0; j--) {
-        //            if (arr[j] < arr[j-1]) {
-        //                swap(arr[j], arr[j-1]);
-        //            } else {
-        //                break;
-        //            }
-        //        }
-        
-        //        for (int j = i; j >0 && arr[j] < arr[j-1]; j--) {
-        //            swap(arr[j], arr[j-1]);
-        //        }
+//        for (int j = i; j >0; j--) {
+//            if (arr[j] < arr[j-1]) {
+//                swap(arr[j], arr[j-1]);
+//            } else {
+//                break;
+//            }
+//        }
+//
+//        for (int j = i; j >0 && arr[j] < arr[j-1]; j--) {
+//            swap(arr[j], arr[j-1]);
+//        }
         
         // 优化：之前每次内层循环都会交换一次元素，现在把需要排序的当前元素记下，每次如果比较的元素比他大，就往后移，不交换
         T a = arr[i];
