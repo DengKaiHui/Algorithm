@@ -12,6 +12,7 @@
 #include "MergeSort.hpp"
 #include "MaxHeap.hpp"
 #include "BST.hpp"
+#include "UnionFind.hpp"
 using namespace std;
 using namespace SortTestHelper;
 
