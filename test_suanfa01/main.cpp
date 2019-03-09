@@ -36,44 +36,6 @@ void selectionSort(T *arr, int n) {
 //        arr[minIndex] = temp;
     }
 }
-/*
- * 快速排序：选定元素v，让其找到合适的位置，使得arr[l...j-1] < v , arr[j+1...r] > v
- */
-
-// 对arr[l...r]部分进行partition操作
-// 返回j, 使得arr[l...j-1] < arr[j] , arr[j+1...r] > arr[j]
-template <class T>
-int __partition(T arr[], int l, int r) {
-    int v = arr[l];
-    
-    // arr [l+1...j] < v, arr[j+1...i) > v （包括初始情况）
-    int j = l;
-    for (int i = l+1; i<=r; i++) {
-        if (arr[i] < v) {
-            swap(arr[i], arr[j+1]);
-            j++;
-        }
-    }
-    swap(arr[j], arr[l]);
-    return j;
-}
-
-// 对arr[l...r]部分进行快速排序
-template <class T>
-void __quickSort(T arr[], int l, int r) {
-    if (l>=r) {
-        return;
-    }
-    
-    int v = __partition(arr, l, r);
-    __quickSort(arr, l, v-1);
-    __quickSort(arr, v+1, r);
-}
-
-template <class T>
-void quickSort(T arr[], int n) {
-    __quickSort(arr, 0, n-1);
-}
 
 // 求数组的逆序对：归并排序，算法基本一样，归并操作的时候增加计数逻辑，后半部分数组中元素如果比前半部分中元素小（那么就是比它后面的数都小），那么就存在（前半部分数组结尾索引-前半部分比较元素索引）个逆序对
 

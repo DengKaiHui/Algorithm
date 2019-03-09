@@ -18,7 +18,8 @@
 #pragma mark - 自顶向下的归并排序
 // 归并函数，将arr[l...mid]和arr[mid+1...r]两部分进行归并
 template <class T>
-void __merge(T arr[], int l, int mid, int r, int tempArr[]) {
+void __merge(T arr[], int l, int mid, int r) {
+    T tempArr[r-l+1];
     // 先把arr中的元素都拷贝到tempArr中
     for (int i = l; i <= r; i++) {
         tempArr[i-l] = arr[i];
@@ -48,7 +49,7 @@ void __merge(T arr[], int l, int mid, int r, int tempArr[]) {
 
 // 递归调用，对arr[l...r](前闭后闭，注意边界值是否包含)的范围进行排序
 template <class T>
-void __mergeSort(T arr[], int l, int r, int tempArr[]) {
+void __mergeSort(T arr[], int l, int r) {
     // 递归方法，先考虑出口条件
         if (l >= r) {
             return;
@@ -62,10 +63,10 @@ void __mergeSort(T arr[], int l, int r, int tempArr[]) {
     
     // 计算中点
     int mid = (l + r)/2;
-    __mergeSort(arr, l, mid, tempArr);      // 递归左边
-    __mergeSort(arr, mid+1, r, tempArr);    // 递归右边
+    __mergeSort(arr, l, mid);      // 递归左边
+    __mergeSort(arr, mid+1, r);    // 递归右边
     if (arr[mid] > arr[mid+1]) {            // 【优化】左边最大元素小于等于右边最小元素的时候不用归并
-        __merge(arr, l, mid, r, tempArr);       // 归并
+        __merge(arr, l, mid, r);       // 归并
     }
     
 }
@@ -73,20 +74,18 @@ void __mergeSort(T arr[], int l, int r, int tempArr[]) {
 // 归并排序函数
 template <class T>
 void mergeSort(T arr[], int n) {
-    T *tempArr = new T[n];
-    __mergeSort(arr, 0, n-1, tempArr);
+    __mergeSort(arr, 0, n-1);
 }
 
 
 #pragma mark - 自底向上的归并排序
 template <class T>
 void mergeSortBU(T arr[], int n) {
-    int *tempArr = new T[n];
     for (int sz = 1; sz < n; sz = sz*2) {
         // 对arr[i...i+sz-1] 和 arr[i+sz...i+2*sz-1] 进行归并
         for (int i = 0; i+sz <n ; i += 2*sz) {
             if (arr[i+sz-1] > arr[i+sz]) {
-                __merge(arr, i, i+sz-1, min(i+2*sz-1, n-1), tempArr);
+                __merge(arr, i, i+sz-1, min(i+2*sz-1, n-1));
             }
         }
     }

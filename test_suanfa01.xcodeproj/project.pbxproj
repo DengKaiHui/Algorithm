@@ -26,6 +26,8 @@
 		3B43D69921A5B35500881811 /* test_suanfa01 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = test_suanfa01; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B43D69C21A5B35500881811 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		3B43D6A421A5B45700881811 /* SortTestHelper.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = SortTestHelper.hpp; sourceTree = "<group>"; };
+		6A03DF8B2233BF6D006D51CD /* MergeSort_new.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = MergeSort_new.hpp; sourceTree = "<group>"; };
+		6A03DF8E2233FC82006D51CD /* QuickSort.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = QuickSort.hpp; sourceTree = "<group>"; };
 		6AB404A121B3CD4A00C687A1 /* MergeSort.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = MergeSort.hpp; sourceTree = "<group>"; };
 		6AB404A421B3CD7300C687A1 /* InsertSort.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = InsertSort.hpp; sourceTree = "<group>"; };
 		6AF9ABAB21E1F13F00EB4DDC /* UnionFind.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = UnionFind.hpp; sourceTree = "<group>"; };
@@ -66,6 +68,8 @@
 				3B43D69C21A5B35500881811 /* main.cpp */,
 				6AB404A421B3CD7300C687A1 /* InsertSort.hpp */,
 				6AB404A121B3CD4A00C687A1 /* MergeSort.hpp */,
+				6A03DF8B2233BF6D006D51CD /* MergeSort_new.hpp */,
+				6A03DF8E2233FC82006D51CD /* QuickSort.hpp */,
 				FEAD8C8821D67BC500612739 /* MaxHeap.hpp */,
 				3B43D6A421A5B45700881811 /* SortTestHelper.hpp */,
 				FE087D4C21DFA22600BCC669 /* BST.hpp */,
